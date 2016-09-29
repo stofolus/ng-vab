@@ -1,0 +1,18 @@
+<md-card>
+  <md-toolbar color="primary">Anmäl VAB</md-toolbar>
+  <md-card-content>
+    <form [formGroup]="form">
+      <md-input formControlName="socialSecurityNumber" class="full-width" placeholder="Ditt Personnummer">
+      </md-input>
+      <md-input formControlName="childSocialSecurityNumber" placeholder="Barnets Personnummer">
+      </md-input>
+
+      <md-checkbox formControlName="useOnlineService">Jag kommer anmäla VAB via Mina Sidor</md-checkbox>
+      <button (click)="putRegistration()" class="send" md-raised-button color="primary">Skicka anmälan</button>
+      <div class="clearfix"></div>
+    </form>
+     <p>Form: {{ form.value | json }}</p>
+     <p>Form status: {{ form.status }}</p>
+     <p>Form status: {{ form.get('socialSecurityNumber').errors | json }}</p>
+  </md-card-content>
+</md-card>

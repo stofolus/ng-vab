@@ -1,0 +1,8 @@
+{
+  "/fk_apps": {
+    "target": "https://www.forsakringskassan.se",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": "true"
+  }
+}
