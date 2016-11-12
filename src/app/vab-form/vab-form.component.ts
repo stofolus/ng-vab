@@ -34,7 +34,7 @@ export class VabFormComponent {
             const registration = new Registration(
                 <string> this.form.get('socialSecurityNumber').value.replace('-', ''),
                 <string> this.form.get('childSocialSecurityNumber').value.replace('-', ''),
-                <boolean> this.form.get('useOnlineService').value
+                <boolean> !this.form.get('useOnlineService').value
             );
             this.registrationService.putRegistration(registration)
                 .subscribe(
